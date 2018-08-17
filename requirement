@@ -1,0 +1,9 @@
+certifi==2018.8.13
+chardet==3.0.4
+Django==1.11.10
+django-bootstrap3==10.0.1
+idna==2.7
+pytz==2018.5
+requests==2.19.1
+urllib3==1.23
+wincertstore==0.2

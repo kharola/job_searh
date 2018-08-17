@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+
+<div class="container">
+  <h2>Job Search</h2>
+  <form method="GET" action="{% url "list" %}">
+    {% csrf_token %}
+    {% bootstrap_form form layout='inline' %}
+    <button class="btn btn-default" type="submit">search</button>
+  </form>
+</div>
+<hr>
+
+<div class="container">
+  {% for job in data  %}
+    <p><strong>Locaton:{{ job.location }}</strong></p>
+    <strong>Title:{{ job.title }}</strong> <br>
+      <p>For more information: <a href="{% url 'detail' pk=job.id %}">Click here</a></p>
+      <hr>
+  {% endfor %}
+
+</div>
+
+
+{% endblock %}

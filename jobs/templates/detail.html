@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+
+<div class="container">
+  <h3>Title: {{ detail_data.title }}</h3> <br>
+  <h3>Location: {{ detail_data.location }}</h3>
+  <hr>
+  <strong>Posted on: {{ detail_data.created_at }}</strong> <br>
+  <strong>Type:{{ detail_data.type }} </strong> <br>
+     <strong>Compnany: {{ detail_data.company }}</strong><br>
+     <h5>Apply Here!</h5>
+     <strong><a href="{{ detail_data.compny_url }}">click here</a></strong><br>
+     {{ detail_data.description }}
+
+</div>
+
+
+{% endblock %}
